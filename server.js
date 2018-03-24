@@ -74,6 +74,27 @@ var articles ={
         
     
     },
+    'article-four':{title:'Article Four |Pradeep kumar',
+        heading:'Article four',
+        date:'17 march 2018',
+        content:`<p>
+                This is my first article on IMAD.This is my first article on IMAD.
+                This is my first article on IMAD.
+                T IMAD.
+            </p>
+            <p>
+                This is my first article on IMAD.This is my first article on IMAD.
+                
+                This is my first article on IMAD.
+            </p>
+            <p>
+                This is my first article on IMAD.This is my first article on IMAD.
+                T
+                This is my first article on IMAD.
+            </p>`
+        
+        
+    }
 };
 
 function createTemplate (data){
