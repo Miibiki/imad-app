@@ -1,17 +1,22 @@
-console.log('Loaded!');
+var button=document.getElementById('counter');
 
-var element=document.getElementById('main-text');
-element.innerHTML='New Value';
-var img=document.getElementById('madi');
-var marginLeft = 0;
-function moveRight(){
-    marginLeft=marginLeft + 1;
-    img.style.marginLeft=marginLeft + 'px';
-}
-
-img.onclick=function(){
+button.onclick= function(){
     
-      var interval=setInterval(moveRight,50);
-  
-  
+    var request = new XMLHttpRequest();
+    
+    request.onreadyrequestchange = function(){
+        if(request.readystate===XMLHttpRequest.DONE){
+            if(request.status===200){
+            var counter= request.ResponseText;
+            var span=document.getElementbyId('count');
+             span.innerHTML=counter.toString();
+            }
+        }
+    };
+    request.open('GET', 'http://pradeep1546k.imad.hasura-app.io/counter', true);
+    request.send(null);
+    
+    
+    
+    
 };
