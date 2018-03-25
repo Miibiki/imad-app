@@ -4,6 +4,6 @@ var element=document.getElementById('main-text');
 element.innerHTML='New Value';
 var img=document.getElementById('madi');
 img.onclick=function(){
-  img.style.marginright='100px';
+  img.style.marginleft='100px';
   
 };
